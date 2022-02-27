@@ -81,40 +81,40 @@
       }
     },
     "com.vrmc.gltf": {
-      "version": "https://github.com/vrm-c/UniVRM.git?path=/Assets/UniGLTF#v0.96.0",
+      "version": "https://github.com/vrm-c/UniVRM.git?path=/Assets/UniGLTF#v0.95.1",
       "depth": 0,
       "source": "git",
       "dependencies": {
-        "com.vrmc.vrmshaders": "0.96.0"
+        "com.vrmc.vrmshaders": "0.95.1"
       },
-      "hash": "969370883a205a85e03c5d2fe773a1cf04f1770b"
+      "hash": "646573aeff2135f138d24a3d0bb16516a6fa9c1f"
     },
     "com.vrmc.univrm": {
-      "version": "https://github.com/vrm-c/UniVRM.git?path=/Assets/VRM#v0.96.0",
+      "version": "https://github.com/vrm-c/UniVRM.git?path=/Assets/VRM#v0.95.1",
       "depth": 0,
       "source": "git",
       "dependencies": {
-        "com.vrmc.vrmshaders": "0.96.0",
-        "com.vrmc.gltf": "0.96.0"
+        "com.vrmc.vrmshaders": "0.95.1",
+        "com.vrmc.gltf": "0.95.1"
       },
-      "hash": "969370883a205a85e03c5d2fe773a1cf04f1770b"
+      "hash": "646573aeff2135f138d24a3d0bb16516a6fa9c1f"
     },
     "com.vrmc.vrm": {
-      "version": "https://github.com/vrm-c/UniVRM.git?path=/Assets/VRM10#v0.96.0",
+      "version": "https://github.com/vrm-c/UniVRM.git?path=/Assets/VRM10#v0.95.1",
       "depth": 0,
       "source": "git",
       "dependencies": {
-        "com.vrmc.vrmshaders": "0.96.0",
-        "com.vrmc.gltf": "0.96.0"
+        "com.vrmc.vrmshaders": "0.95.1",
+        "com.vrmc.gltf": "0.95.1"
       },
-      "hash": "969370883a205a85e03c5d2fe773a1cf04f1770b"
+      "hash": "646573aeff2135f138d24a3d0bb16516a6fa9c1f"
     },
     "com.vrmc.vrmshaders": {
-      "version": "https://github.com/vrm-c/UniVRM.git?path=/Assets/VRMShaders#v0.96.0",
+      "version": "https://github.com/vrm-c/UniVRM.git?path=/Assets/VRMShaders#v0.95.1",
       "depth": 0,
       "source": "git",
       "dependencies": {},
-      "hash": "969370883a205a85e03c5d2fe773a1cf04f1770b"
+      "hash": "646573aeff2135f138d24a3d0bb16516a6fa9c1f"
     },
     "com.unity.modules.ai": {
       "version": "1.0.0",
