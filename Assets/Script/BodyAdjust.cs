@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+using VRM;
 
 public class BodyAdjust : MonoBehaviour
 {
@@ -21,6 +22,10 @@ public class BodyAdjust : MonoBehaviour
 
     [SerializeField] InputField HipsY;
 
+    [SerializeField] InputField OffsetX;
+    [SerializeField] InputField OffsetY;
+    [SerializeField] InputField OffsetZ;
+
     Transform Root;
     Transform Head;
     Transform UpperArmL;
@@ -28,6 +33,8 @@ public class BodyAdjust : MonoBehaviour
     Transform UpperLegL;
     Transform UpperLegR;
     Transform Hips;
+
+    VRMFirstPerson VRMFirstPerson;
 
     bool InitComp = false;
 
@@ -45,7 +52,7 @@ public class BodyAdjust : MonoBehaviour
 
         Hips = anim.GetBoneTransform(HumanBodyBones.Hips);
 
-        UpdateInputField();
+        UpdateInputField(model);
     }
 
     public void OnValueChanged()
@@ -60,6 +67,8 @@ public class BodyAdjust : MonoBehaviour
         UpperLegR.localScale = TextToVec3(LegX.text, LegY.text, LegZ.text);
 
         Hips.localPosition = TextToVec3("0", HipsY.text, "0");
+
+        VRMFirstPerson.FirstPersonOffset = TextToVec3(OffsetX.text, OffsetY.text, OffsetZ.text);
     }
 
     Vector3 TextToVec3(string textX, string textY, string textZ)
@@ -71,7 +80,7 @@ public class BodyAdjust : MonoBehaviour
         return new Vector3(x, y, z);
     }
 
-    void UpdateInputField()
+    void UpdateInputField(GameObject model)
     {
         InitComp = false;
 
@@ -81,6 +90,11 @@ public class BodyAdjust : MonoBehaviour
         UpdateInputField(LegX, LegY, LegZ, UpperLegL);
 
         HipsY.text = Hips.localPosition.y.ToString();
+
+        VRMFirstPerson = model.GetComponent<VRMFirstPerson>();
+        OffsetX.text = VRMFirstPerson.FirstPersonOffset.x.ToString();
+        OffsetY.text = VRMFirstPerson.FirstPersonOffset.y.ToString();
+        OffsetZ.text = VRMFirstPerson.FirstPersonOffset.z.ToString();
 
         InitComp = true;
     }
